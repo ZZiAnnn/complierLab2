@@ -1,0 +1,12 @@
+while (a3+15)>0xa do 
+    if x2 = 7 then 
+        while y<z do y = x * y / z; 
+;
+a = b + 1 / c - 1 + d;
+;
+a = b + 1 / c - (1 + d);
+;
+if a < b then
+    a = b + 1 / c - (1 + d);
+else
+    c = d;
