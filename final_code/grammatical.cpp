@@ -265,9 +265,9 @@ Tree parse_P(P& p)
 
 		std::string p_place = p.place;
 		p.place = get_new_temp();
-		p.code = p.code + f1.code + gen("\t" + p.place + " := " + p_place + " * " + f1.place);
+		p.code = f1.code + p.code + gen("\t" + p.place + " := " + p_place + " * " + f1.place);
 
-		P p1;
+		P p1 = p;
 		tr.add_son(parse_P(p1));
 
 		p.code = p1.code;
@@ -284,7 +284,7 @@ Tree parse_P(P& p)
 
 		std::string p_place = p.place;
 		p.place = get_new_temp();
-		p.code = p.code + f1.code + gen("\t" + p.place + " := " + p_place + " / " + f1.place);
+		p.code = f1.code + p.code + gen("\t" + p.place + " := " + p_place + " / " + f1.place);
 
 		P p1 = p;
 		parse_P(p1);
